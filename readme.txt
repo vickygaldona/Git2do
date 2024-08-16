@@ -1,1 +1,0 @@
-mis primeros pasos en git

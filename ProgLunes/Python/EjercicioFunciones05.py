@@ -11,3 +11,4 @@ def fahrenheit_celsius(fahrenheit):
 celsius = float(input('digite el valor de celsius: '))
 resultado = celsius_fahrenheit(celsius)
 print(f'{celsius} C a F -> {resultado: .2f}')
+ #clase

@@ -6,10 +6,21 @@ let persona = {
     nombre:'Carlos',
     apellido:  'Gil',
     email: 'cgil@gmail.com',
-    edad: 30,
+    edad: 28;
+    idioma: 'ES',
+    get lang(){
+        return this.idioma.toLocaleUpperCase
+    },
+    set lang(lang){
+        this.idioma = lang.toUpperCase();
+    }
     nombreCompleto: function(){// metodo o funcion en JavaScript
         return this.nombre+' '+this.apellido;
 
+    },
+    get nombreEdad(){
+        return 'El nombre es: '+this.nombre+', edad:  'this.edad;
+    }
     }
 }
 console.log(persona.nombre)
@@ -58,3 +69,29 @@ console.log(personaArray);
 console.log('distinta forma de imprimir un objeto')
 let personaString =   JSON.stringify(persona);
 console.log(personaString);
+
+console.log('comenzamos a utilizar el metodo get');
+console.log(persona.nombreEdad);
+
+
+
+console.log(('comenzamos con el metodo get y set para idiomas'));
+persona.lang = 'en';
+console.log(persona.lang);
+
+
+function Persona3(nombre = 'luis', apellido, email){
+    this.nombre = nombre;
+    this.apellido = apellido;
+    this.email = email;
+    this.nombreCompleto = function(){
+        return this.nombre+ ' '+this.apellido;
+    }
+}
+let padre = new Persona3('leo', 'lopez', 'lopez1@gmail.com');
+padre.nombre = 'luis';
+console.log(padre);
+console.log(padre.nombreCompleto());
+let madre = new Persona3('laura', 'contrera', 'contrera1@gmail.com');
+console.log(madre);
+console.log(madre.nombreCompleto());

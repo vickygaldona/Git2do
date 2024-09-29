@@ -12,12 +12,13 @@ public class Aritmetica {
     }
     public int sumarConRetorno(){
         //int resultado = a + b;
-        return a + b;
+        return this.a + this.b;
     }
     
-    public int sumarConArgumentos(int arg1, int arg2){
-        a = arg1;
-        b = arg2;
-        return a + b;
+    public int sumarConArgumentos(int a, int b){
+        this.a = a;
+        this.b = b;
+        //return a + b;
+        return this.sumarConRetorno();
     }
 }

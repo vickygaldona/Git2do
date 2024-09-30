@@ -75,6 +75,7 @@ class Persona {
     String apellido;
     
     Persona(String nombre, String apellido) { // Constructor
+        Imprimir imprimir = new Imprimir();
         super(); // llamada al constructor de la clase padre Object
         this.nombre = nombre;
         this.apellido = apellido;

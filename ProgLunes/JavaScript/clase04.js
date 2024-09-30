@@ -90,8 +90,85 @@ function Persona3(nombre = 'luis', apellido, email){
 }
 let padre = new Persona3('leo', 'lopez', 'lopez1@gmail.com');
 padre.nombre = 'luis';
+padre.telefono = '37366272';
 console.log(padre);
 console.log(padre.nombreCompleto());
 let madre = new Persona3('laura', 'contrera', 'contrera1@gmail.com');
+console.log(madre.telefono);
 console.log(madre);
 console.log(madre.nombreCompleto());
+
+
+//diferentes formas de crear objetos
+//caso objeto 1
+let miObjeto = new Object();
+
+//caso objeto 2
+let miOBjeto2 = {};
+
+//caso string 1
+let miCadena1 = new String('hola');
+
+//caso string2 
+let miCadena2 = 'hola'
+
+//caso con numeros 1
+let miNumero = new Number(1);
+
+//caso con numeros 2
+let miNumero2 = 1;
+
+//caso boolean 1
+let miBoolean1 = new Boolean(false);
+
+//caso boolean 2
+let miBoolean2 = false;
+
+//caso arreglos 1
+let miArreglo1 = new Array();
+
+//caso arreglos 2
+let miArreglo2 = [];
+
+//caso funcion 1 
+let miFuncion1 = new function(){};
+
+//caso funcion 2
+
+let miFuncion2 = function(){};
+
+
+//uso de prototype
+
+Persona3.prototype.telefono = '3448392333'
+console.log(padre);
+console.log(madre.telefono);
+madre.telefono = '4444449554'
+console.log(madre.telefono)
+
+//uso de call
+ let persona4 = {
+    nombre: 'juan'
+    apellido: 'perez'
+    nombreCompleto2: function(){
+        //return titulo+': '+this.nombre+' '+this.apellido+' '´telefono;
+        return this.nombre+' '+this.apellido;
+
+    } 
+}
+
+let persona5 = {
+    nombre: 'carlos',
+    apellido: 'lara'
+}
+
+console.log(persona4.nombreCompleto2('lic. ', '737278274772'));
+console.log(persona4.nombreCompleto2.call(persona5, 'ing. ', '4884838383'));
+
+
+//metodo apply
+let arreglo = ['ing', '848399393'];
+console.log(persona4.nombreCompleto2.apply(persona5, arreglo));
+
+
+)

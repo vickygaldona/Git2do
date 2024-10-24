@@ -28,6 +28,13 @@ class Persona { //Clase padre
         //el metodo que se ejecuta depende si es una referencia de tipo padre o hija
         return this.nombreCompleto();
     }
+
+    static saludar(){
+        console.log('saludos desde este metodo static');
+    }
+
+
+
 }
 
 class Empleado extends Persona { // Clase hija
@@ -71,3 +78,5 @@ console.log(empleado1.nombreCompleto());
 //Object.prototype.toString manera de acceder atributos y metodos de manera dinamica
 console.log(empleado1.toString());
 console.log(persona1.toString());
+
+persona1.saludar();

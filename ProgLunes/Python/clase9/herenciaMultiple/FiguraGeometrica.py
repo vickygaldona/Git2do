@@ -10,11 +10,12 @@ class FiguraGeometrica(ABC):
             self._ancho = ancho
         else:
             self._ancho = 0
-            print(f"Valor erroneo para el ancho: {ancho}")
+            print(f'valor erroneo para el ancho: {ancho} ')
         if self._validar_valores(alto):
             self._alto = alto
         else:
             self._alto = 0
+            print(f'valor erroneo para el alto: {alto} ')
 
     @property
     def ancho(self):
@@ -25,7 +26,7 @@ class FiguraGeometrica(ABC):
         if self._validar_valores(ancho):
             self._ancho = ancho
         else:
-            print(f"Valor erroneo ancho: {ancho}")
+            print(f'Valor erroneo ancho: {ancho}')
 
     @property
     def alto(self):
@@ -36,7 +37,7 @@ class FiguraGeometrica(ABC):
         if self._validar_valores(alto):
             self._alto = alto
         else:
-            print(f"Valor erroneo ancho: {alto}")
+            print(f'Valor erroneo ancho: {alto}')
 
     @abstractmethod
     def calcular_area(self):
@@ -46,4 +47,7 @@ class FiguraGeometrica(ABC):
         return f"FiguraGeometrica: [ Alto: {self._alto}, Ancho: {self._ancho} ]"
 
     def _validar_valores(self, valor):
+        return True if 0 < valor < 10 else False
+
+    def _validar_valores(self, valor): #Metodo encapsulado
         return True if 0 < valor < 10 else False

@@ -8,8 +8,11 @@ class Cuadrado(FiguraGeometrica, Color):
         FiguraGeometrica.__init__(self, lado, lado)
         Color.__init__(self, color)
 
+    def calcular_area(self):
+        return self.alto * self.ancho
+
     def __str__(self):  # SIRVE PARA SOBREESCRIBIR
         return f"Cuadrado: [{FiguraGeometrica.__str__(self)} {Color.__str__(self)}]"
 
-    def calcular_area(self):
-        return self.alto * self.ancho
+
+
